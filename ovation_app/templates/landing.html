@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="mystyle.css">
-    </head>
-    <body>
-        <div class="textbox">
-            <h2>This is a heading in a div element</h2>
-            <p>This is some text in a div element.</p>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h1>About Page</h1>
+    <p> This is ovation :D</p>
+<!-- Not strictly necessary to define which enblock but good for clarity-->
+{% endblock content %}

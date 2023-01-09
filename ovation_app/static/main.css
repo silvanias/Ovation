@@ -1,0 +1,53 @@
+/*
+CSS HEX
+#1c1c1c - Light Black - Background 
+#ef233cff - Crimson  - Accent
+#fffffc - White - Text
+#282828  - Grey - Onhover
+*/
+
+body {
+  background-color: #1c1c1cff;
+  color: #fffffc; 
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+background-color: #1c1c1cff;
+overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+border-bottom: 1px solid #ef233cff;
+float: right;
+color: #fffffc;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #282828;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #ef233cff;
+color: #1c1c1cff;
+}
+
+.alert {
+color: #ef233cff;
+background-color: #282828;
+width: fit-content;
+padding: 10px;
+border-radius: 25px;
+}
+
+a {
+color: #ef233cff;
+}
