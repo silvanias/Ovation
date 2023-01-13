@@ -51,3 +51,21 @@ border-radius: 25px;
 a {
 color: #ef233cff;
 }
+
+/* css to do with input forms*/
+
+.input-form{
+  text-align: center;
+}
+
+.input-field {
+  font-family: 'JetBrains Mono', monospace;
+  width: 50%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #ef233cff;
+  background-color : #2d2d2d;
+}
