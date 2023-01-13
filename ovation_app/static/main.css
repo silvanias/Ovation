@@ -69,3 +69,17 @@ color: #ef233cff;
   border-bottom: 1px solid #ef233cff;
   background-color : #2d2d2d;
 }
+
+.input-button {
+  font-family: 'JetBrains Mono', monospace;
+  width: 30%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: #ef233cff;
+  color: #fffffc;
+  border-radius: 30px;
+}
+
