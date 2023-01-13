@@ -58,6 +58,12 @@ color: #ef233cff;
   text-align: center;
 }
 
+.input-field:focus {
+  outline-color: #ef233cff;
+  border: 1px solid #1c1c1c;
+  /*box-shadow: 0 0 5px #ef233cff;*/
+}
+
 .input-field {
   font-family: 'JetBrains Mono', monospace;
   width: 50%;
@@ -69,6 +75,9 @@ color: #ef233cff;
   border-bottom: 1px solid #ef233cff;
   background-color : #2d2d2d;
   color: #fffffc;
+  outline-color: #1c1c1c;
+  outline-width: 1px;
+  outline-style: solid;
 }
 
 .input-button {
