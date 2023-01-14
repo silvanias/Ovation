@@ -8,21 +8,20 @@
         <p> This is ovation :D</p>
     </section>
 
-    <section>
+    <section>   
         <div class="logos">
             <div class="logo hidden">
-                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+                <img src="{{url_for('static', filename='github-mark-white.png')}}"/>
+                <div class="desc">Add a description of the image here</div>
             </div>
             <div class="logo hidden">
-                <img src="{{url_for('static', filename='githublogo.png')}}"/>
-            </div>
-            <div class="logo hidden">
-                <img src="{{url_for('static', filename='githublogo.png')}}"/>
-            </div>
-            <div class="logo hidden">
-                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+                <img src="{{url_for('static', filename='github-mark-white.png')}}"/>
+                <div class="desc">Add a description of the image here</div>
             </div>
         </div>
     </section>
-    <button class="getstarted-button" style="vertical-align:middle"><span> Get Started! </span></button>
+
+    <section>
+        <button class="getstarted-button" style="vertical-align:middle"><span> Get Started! </span></button>
+    </section>
 {% endblock content %}
