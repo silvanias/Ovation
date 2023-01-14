@@ -12,7 +12,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Add a black background color to the top navigation */
+/* Styles for nav bar */
 .topnav {
 background-color: #1c1c1cff;
 overflow: hidden;
@@ -29,12 +29,11 @@ text-decoration: none;
 font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
 background-color: #282828;
 }
 
-/* Add a color to the active/current link */
+/* WIP Add a color to the active/current link */
 .topnav a.active {
 background-color: #ef233cff;
 color: #1c1c1cff;
@@ -48,11 +47,47 @@ padding: 10px;
 border-radius: 25px;
 }
 
-a {
-color: #ef233cff;
+/* Style for landing section */
+section{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 10vh;
 }
 
-/* css to do with input forms*/
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(-100%);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.logos {
+  display: flex;
+}
+
+.logo:nth-child(1){
+  transition-delay: 100ms;
+}
+
+.logo:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.logo:nth-child(3){
+  transition-delay: 300ms;
+}
+
+.logo:nth-child(4){
+  transition-delay: 400ms;
+}
+/* Styles for input forms */
 
 .input-form{
   text-align: center;
@@ -61,7 +96,6 @@ color: #ef233cff;
 .input-field:focus {
   outline-color: #ef233cff;
   border: 1px solid #1c1c1c;
-  /*box-shadow: 0 0 5px #ef233cff;*/
 }
 
 .input-field {
@@ -93,3 +127,45 @@ color: #ef233cff;
   border-radius: 30px;
 }
 
+/* Styles for landing button */
+.getstarted-button {
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  width: 30%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: #ef233cff;
+  color: #fffffc;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.getstarted-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.getstarted-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.getstarted-button:hover span {
+  padding-right: 25px;
+}
+
+.getstarted-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

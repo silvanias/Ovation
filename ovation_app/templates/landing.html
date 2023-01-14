@@ -1,5 +1,28 @@
 {% extends "base.html" %}
+{% block head %}
+    <script defer src="{{ url_for('static', filename='landing.js') }}"></script>
+{% endblock head %}
 {% block content %}
-    <h1>About Page</h1>
-    <p> This is ovation :D</p>
+    <section class="hidden">
+        <h1>About Page</h1>
+        <p> This is ovation :D</p>
+    </section>
+
+    <section>
+        <div class="logos">
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='githublogo.png')}}"/>
+            </div>
+        </div>
+    </section>
+    <button class="getstarted-button" style="vertical-align:middle"><span> Get Started! </span></button>
 {% endblock content %}
