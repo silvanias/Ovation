@@ -1,4 +1,3 @@
-from flask import Flask
 from ovation_app import create_app
 
 app = create_app()
