@@ -93,3 +93,7 @@ color: #ef233cff;
   border-radius: 30px;
 }
 
+.input-button:hover {
+    background-color: #cc0f26;
+}
+
