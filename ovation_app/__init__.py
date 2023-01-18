@@ -6,7 +6,6 @@ app.config.from_pyfile('config.py')
 db = SQLAlchemy()
     
 def create_app():
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
     db.init_app(app)
 
     from .routes import routes
