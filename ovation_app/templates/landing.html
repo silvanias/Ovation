@@ -12,16 +12,28 @@
         <div class="logos">
             <div class="logo hidden">
                 <img src="{{url_for('static', filename='github-mark-white.png')}}"/>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">Create an account with full functionality</div>
             </div>
             <div class="logo hidden">
                 <img src="{{url_for('static', filename='github-mark-white.png')}}"/>
-                <div class="desc">Add a description of the image here</div>
+                <div class="desc">Connect with venues to play at</div>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='github-mark-white.png')}}"/>
+                <div class="desc">Gain cred and notoriety!</div>
             </div>
         </div>
     </section>
 
     <section>
-        <button class="getstarted-button" style="vertical-align:middle"><span> Get Started! </span></button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ullam beatae hic cum et, quidem vero. Vero rem quidem nam natus expedita esse sunt, cupiditate ex maiores magni blanditiis cum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maiores molestiae eos dolorum reprehenderit vitae repellendus aperiam tenetur necessitatibus vero, architecto pariatur. Necessitatibus porro consectetur quae laborum velit quaerat nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores at error ipsum nemo quas deserunt placeat hic itaque est voluptate, in natus vero tenetur consequatur? Ullam voluptates consectetur nemo molestiae?</p>
+    </section>
+
+    <section>
+        <a class="getstarted-button" href="{{ url_for('routes.login') }}">
+            <span> Get Started! </span>
+        </a>
     </section>
 {% endblock content %}

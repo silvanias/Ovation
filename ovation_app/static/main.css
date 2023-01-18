@@ -6,10 +6,17 @@ CSS HEX
 #282828  - Grey - Onhover
 */
 
+/** { border: 1px solid green; }*/
+
 body {
   background-color: #1c1c1cff;
   color: #fffffc; 
   font-family: 'JetBrains Mono', monospace;
+}
+
+p {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 /* Styles for nav bar */
@@ -52,6 +59,7 @@ section{
   display: grid;
   place-items: center;
   align-content: center;
+  text-align: start;
   min-height: 10vh;
 }
 
@@ -74,9 +82,12 @@ section{
 
 .logo{
   margin: 5px;
+  padding: 7px;
   border: 1px solid #ccc;
   float: left;
   width: 180px;
+  background-color: #282828;
+  border-radius: 25px;
 }
 
 div.logo img {
@@ -91,9 +102,13 @@ div.logo img {
   transition-delay: 300ms;
 }
 
+.logo:nth-child(3){
+  transition-delay: 500ms;
+}
+
 div.desc {
   padding: 15px;
-  text-align: center;
+  text-align: start;
 }
 
 /* Styles for input forms */
@@ -180,4 +195,15 @@ div.desc {
 .getstarted-button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* Styles for footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
