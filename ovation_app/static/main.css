@@ -135,6 +135,10 @@ div.desc {
   border-radius: 30px;
 }
 
+.input-button:hover {
+    background-color: #cc0f26;
+}
+
 /* Styles for landing button */
 .getstarted-button {
   font-family: 'JetBrains Mono', monospace;

@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="{{ url_for('landing') }}">About</a>
-        <a href="{{ url_for('profile') }}">Profile</a>
-        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('routes.landing') }}">About</a>
+        <a href="{{ url_for('routes.profile') }}">Profile</a>
+        <a href="{{ url_for('routes.login') }}">Login</a>
     </div>
     {% block content %}{% endblock %}
 </body>
