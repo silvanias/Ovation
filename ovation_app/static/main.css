@@ -22,7 +22,12 @@ p {
 /* Styles for nav bar */
 .topnav {
 background-color: #1c1c1cff;
+display: block;
 overflow: hidden;
+position: fixed;
+top: 0px;
+width: 100%;
+z-index: 2;
 }
 
 /* Style the links inside the navigation bar */
