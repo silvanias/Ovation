@@ -25,6 +25,7 @@ background-color: #1c1c1cff;
 display: block;
 overflow: hidden;
 position: fixed;
+left: 0px;
 top: 0px;
 width: 100%;
 z-index: 2;
@@ -205,10 +206,29 @@ div.desc {
 /* Styles for footer */
 .footer {
   position: fixed;
+  display: flex;
+  justify-content: center;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
   text-align: center;
+  background-color: #1c1c1cff;
+  z-index: 2;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.pFooter{
+  padding-top: 5px;
+}
+
+.LinkedIn{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.LinkedIn:hover {
+  filter: brightness(50%);
 }
