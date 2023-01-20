@@ -1,5 +1,42 @@
 {% extends "base.html" %}
+{% block head %}
+    <script defer src="{{ url_for('static', filename='landing.js') }}"></script>
+{% endblock head %}
 {% block content %}
-    <h1>About Page</h1>
-    <p> This is ovation :D</p>
+    <section class="hidden">
+        <h1>About Page</h1>
+        <p> This is ovation :D</p>
+    </section>
+
+    <section>   
+        <div class="logos">
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='images/github-mark-white.png')}}"/>
+                <div class="desc">Create an account with full functionality</div>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='images/github-mark-white.png')}}"/>
+                <div class="desc">Connect with venues to play at</div>
+            </div>
+            <div class="logo hidden">
+                <img src="{{url_for('static', filename='images/github-mark-white.png')}}"/>
+                <div class="desc">Gain cred and notoriety!</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ullam beatae hic cum et, quidem vero. Vero rem quidem nam natus expedita esse sunt, cupiditate ex maiores magni blanditiis cum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maiores molestiae eos dolorum reprehenderit vitae repellendus aperiam tenetur necessitatibus vero, architecto pariatur. Necessitatibus porro consectetur quae laborum velit quaerat nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores at error ipsum nemo quas deserunt placeat hic itaque est voluptate, in natus vero tenetur consequatur? Ullam voluptates consectetur nemo molestiae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempore alias! Fugit quia libero omnis sed ut ipsum blanditiis modi, quisquam enim assumenda sit cupiditate nihil ducimus, mollitia, quos voluptas.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut unde sint tempora. Possimus blanditiis veritatis illo suscipit culpa! Sint ipsam rerum dignissimos sunt deserunt tenetur laboriosam quae fugiat consequuntur. Cum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolor rerum aliquid dolorum corporis ad impedit quae adipisci! Similique est mollitia perferendis saepe neque. Aperiam a ullam deleniti eius eaque!</p>
+    </section>
+
+    <section>
+        <a class="getstarted-button" href="{{ url_for('routes.login') }}">
+            <span> Get Started! </span>
+        </a>
+    </section>
 {% endblock content %}

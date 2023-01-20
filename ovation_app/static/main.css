@@ -6,16 +6,29 @@ CSS HEX
 #282828  - Grey - Onhover
 */
 
+/** { border: 1px solid green; }*/
+
 body {
   background-color: #1c1c1cff;
   color: #fffffc; 
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Add a black background color to the top navigation */
+p {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* Styles for nav bar */
 .topnav {
 background-color: #1c1c1cff;
+display: block;
 overflow: hidden;
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+z-index: 2;
 }
 
 /* Style the links inside the navigation bar */
@@ -29,12 +42,11 @@ text-decoration: none;
 font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
 background-color: #282828;
 }
 
-/* Add a color to the active/current link */
+/* WIP Add a color to the active/current link */
 .topnav a.active {
 background-color: #ef233cff;
 color: #1c1c1cff;
@@ -48,12 +60,64 @@ padding: 10px;
 border-radius: 25px;
 }
 
-a {
-color: #ef233cff;
+/* Style for landing section */
+section{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: start;
+  min-height: 10vh;
 }
 
-/* css to do with input forms*/
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 2s;
+  transform: translateX(-100%);
+}
 
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.logos {
+  display: flex;
+}
+
+.logo{
+  margin: 5px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  background-color: #282828;
+  border-radius: 25px;
+}
+
+div.logo img {
+  width: 100%;
+  height: auto;
+}
+.logo:nth-child(1){
+  transition-delay: 100ms;
+}
+
+.logo:nth-child(2){
+  transition-delay: 300ms;
+}
+
+.logo:nth-child(3){
+  transition-delay: 500ms;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: start;
+}
+
+/* Styles for input forms */
 .input-form{
   text-align: center;
 }
@@ -61,7 +125,6 @@ color: #ef233cff;
 .input-field:focus {
   outline-color: #ef233cff;
   border: 1px solid #1c1c1c;
-  /*box-shadow: 0 0 5px #ef233cff;*/
 }
 
 .input-field {
@@ -97,3 +160,75 @@ color: #ef233cff;
     background-color: #cc0f26;
 }
 
+/* Styles for landing button */
+.getstarted-button {
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  width: 30%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: #ef233cff;
+  color: #fffffc;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.getstarted-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.getstarted-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.getstarted-button:hover span {
+  padding-right: 25px;
+}
+
+.getstarted-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Styles for footer */
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1c1cff;
+  z-index: 2;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.pFooter{
+  padding-top: 5px;
+}
+
+.LinkedIn{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.LinkedIn:hover {
+  filter: brightness(50%);
+}

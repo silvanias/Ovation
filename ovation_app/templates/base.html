@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    {% block head %}{% endblock %}
     <title>Ovation</title>
 </head>
 <body>
@@ -16,6 +17,21 @@
         <a href="{{ url_for('routes.profile') }}">Profile</a>
         <a href="{{ url_for('routes.login') }}">Login</a>
     </div>
+    <br>
+    <br>
     {% block content %}{% endblock %}
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <a href="https://github.com/sikorosenai">
+            <img class="LinkedIn" src="{{url_for('static', filename='images/github-mark-white.png')}}" alt="LinkedIn"/>
+        </a>
+        <p class="pFooter"> <- Silas</p>
+        <p class="pFooter"> Harry -> </p>
+        <a href="https://github.com/Tsangington">
+            <img class="LinkedIn" src="{{url_for('static', filename='images/github-mark-white.png')}}" alt="LinkedIn"/>
+        </a>
+    </footer>
 </body>
 </html>
