@@ -9,7 +9,7 @@ def test_landing(client):
 def test_signup(client, app):
     response = client.post("/signup", data={"email": "test@test.com", "firstName": "Silas", "lastName":"Meow" ,"password":"test" ,"confirmPassword":"passwordTest"})
 
-    with app.app_contect():
+    with app.app_context():
         assert User.query.count() == 1
         assert User.query.first().email == "test@test.com"
         assert User.query.first().firstName == "Silas"
