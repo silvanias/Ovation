@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from .models import User
 from . import db
+from werkzeug.security import generate_password_hash
 routes = Blueprint('routes', __name__)
 
 @routes.route('/')
@@ -25,7 +26,7 @@ def signUp():
             pass
         else:
             #TODO hash password
-            new_user = User(email = email, firstName = firstName, lastName = lastName, password = password1)
+            new_user = User(email = email, firstName = firstName, lastName = lastName, password = generate_password_hash(password1, method = 'pbkdf2:sha256'))
             db.session.add(new_user)
             db.session.commit()
             #TODO flash 'Account created'
