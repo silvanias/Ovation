@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?famil  y=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     {% block head %}{% endblock %}
@@ -19,6 +19,21 @@
     </div>
     <br>
     <br>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div>
+            {{ message }}
+        </div>
+        {% else %}
+        <div>
+            {{ message }}
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
     {% block content %}{% endblock %}
     <br>
     <br>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from .models import User
 from . import db
 from werkzeug.security import generate_password_hash
@@ -22,15 +22,14 @@ def signUp():
         password2 = request.form.get('password2')
     
         if password1 != password2:
-            #TODO flash 'Passwords must match'
-            pass
+            flash('Passwords must match', category='error')
         else:
-            #TODO hash password
             new_user = User(email = email, firstName = firstName, lastName = lastName, password = generate_password_hash(password1, method = 'pbkdf2:sha256'))
             db.session.add(new_user)
             db.session.commit()
-            #TODO flash 'Account created'
-            return redirect(url_for('routes.landing'))
+            flash('User Created!', category='success')
+            return redirect(url_for('routes.profile'))
+            
             
     data = request.form
     print(data)
