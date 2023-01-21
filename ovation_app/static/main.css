@@ -6,7 +6,7 @@ CSS HEX
 #282828  - Grey - Onhover
 */
 
-/** { border: 1px solid green; }*/
+/* { border: 1px solid green; } */
 
 body {
   background-color: #1c1c1cff;
@@ -17,6 +17,10 @@ body {
 p {
   padding-left: 70px;
   padding-right: 70px;
+}
+
+h1 {
+  font-weight:inherit;
 }
 
 /* Styles for nav bar */
@@ -231,4 +235,37 @@ div.desc {
 
 .LinkedIn:hover {
   filter: brightness(50%);
+}
+
+/* Styles for alerts */
+.alert {
+  padding: 10px;
+  background-color: #00a2ff;
+  color: #fffffc;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.closebtn {
+  margin-left: 8px;
+  color: #fffffc;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #1c1c1cff;
+}
+
+.alert.success {
+  background-color: #20C20E;
+}
+
+.alert.error {
+  background-color: #ef233cff;
 }

@@ -22,15 +22,10 @@
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
         {% for category, message in messages %}
-        {% if category == 'error' %}
-        <div>
+        <div class="alert {{ category }}">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             {{ message }}
         </div>
-        {% else %}
-        <div>
-            {{ message }}
-        </div>
-        {% endif %}
         {% endfor %}
     {% endif %}
     {% endwith %}
