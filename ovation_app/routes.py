@@ -50,9 +50,8 @@ def signUp():
             new_user = User(email = email, firstName = firstName, lastName = lastName, password = generate_password_hash(password1, method = 'pbkdf2:sha256'))
             db.session.add(new_user)
             db.session.commit()
-            login_user(user, remember = True)
             flash('User Created!', category='success')
-            return redirect(url_for('routes.profile'))
+            return redirect(url_for('routes.landing'))
     
     data = request.form
     print(data)
