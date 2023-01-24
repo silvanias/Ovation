@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from .models import User
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, login_required, logout_user, current_user
+from flask_login import login_user, login_required, logout_user, current_user, login_manager
 
 
 routes = Blueprint('routes', __name__)
@@ -22,6 +22,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category = 'success')
                 login_user(user, remember = True)
+                login_manager.session['firstName'] = user.firstName
                 return redirect(url_for('routes.profile'))
             else:
                 flash('Incorrect password, try again.', category = 'error')
@@ -51,7 +52,7 @@ def signUp():
             db.session.add(new_user)
             db.session.commit()
             flash('User Created!', category='success')
-            return redirect(url_for('routes.landing'))
+            return redirect(url_for('routes.login'))
     
     data = request.form
     print(data)

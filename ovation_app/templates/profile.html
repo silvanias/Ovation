@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html" %}{% block title %}Your Profile{% endblock title %}
 {% block content %}
-    <h1>Profile Page</h1>
+    <h3> Welcome, {{session['firstName']}}! </h3>
 {% endblock content %}
